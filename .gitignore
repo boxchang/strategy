@@ -26,3 +26,11 @@ __pycache__
 .idea
 .idea/*
 *.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+/logs/
+*/data/
+*/backtest_results/
+*/hyperopt_results/
+*.zip
