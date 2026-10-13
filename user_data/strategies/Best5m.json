@@ -1,0 +1,40 @@
+{
+  "strategy_name": "Best5m",
+  "params": {
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "fast_ma_length": 20,
+      "leverage_opt": 4,
+      "rsi_buy_threshold": 11,
+      "rsi_length": 15,
+      "slow_ma_length": 50,
+      "timeframe_opt": "3m",
+      "trailing_only_offset_is_reached_opt": true,
+      "trailing_stop_opt": false,
+      "trailing_stop_positive_offset_opt": 0.048,
+      "trailing_stop_positive_opt": 0.047
+    },
+    "sell": {
+      "rsi_sell_threshold": 80
+    },
+    "roi": {
+      "0": 0.219,
+      "25": 0.059,
+      "62": 0.023,
+      "182": 0
+    },
+    "stoploss": {
+      "stoploss": -0.115
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-04-09 12:13:29.750747+00:00"
+}

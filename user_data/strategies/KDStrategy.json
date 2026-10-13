@@ -1,0 +1,30 @@
+{
+  "strategy_name": "KDStrategy",
+  "params": {
+    "roi": {},
+    "stoploss": {
+      "stoploss": -0.8
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "buy_threshold": 15,
+      "fastk_period": 14,
+      "slowd_period": 3,
+      "slowk_period": 4
+    },
+    "sell": {
+      "sell_threshold": 79,
+      "stoploss_val": -0.451
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-07-25 08:29:10.259167+00:00"
+}

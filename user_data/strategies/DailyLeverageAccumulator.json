@@ -1,0 +1,29 @@
+{
+  "strategy_name": "DailyLeverageAccumulator",
+  "params": {
+    "roi": {
+      "0": 10.0
+    },
+    "stoploss": {
+      "stoploss": -0.2
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "buy_rsi_trigger": 31,
+      "max_buys_per_day": 3
+    },
+    "sell": {
+      "sell_rsi_trigger": 75
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-31 11:41:08.767328+00:00"
+}

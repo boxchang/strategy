@@ -1,0 +1,34 @@
+{
+  "strategy_name": "SimpleRSIXStrategy",
+  "params": {
+    "roi": {
+      "0": 0.2,
+      "30": 0.15,
+      "60": 0.1
+    },
+    "stoploss": {
+      "stoploss": -0.2
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.05,
+      "trailing_stop_positive_offset": 0.08,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "buy_rsi": 28,
+      "dca_stage1_profit": -0.4,
+      "dca_stage2_profit": -0.58,
+      "dca_stage3_profit": -0.76,
+      "volume_multiplier": 1.2
+    },
+    "sell": {
+      "sell_rsi": 64
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-06-04 13:11:23.217274+00:00"
+}

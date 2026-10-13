@@ -1,0 +1,35 @@
+{
+  "strategy_name": "SimpleKDStrategy",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.04,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 4
+    },
+    "buy": {
+      "buy_kd_range": 30,
+      "buy_kd_trend": 29
+    },
+    "sell": {
+      "exit_kd": 75
+    },
+    "roi": {
+      "0": 0.061,
+      "81": 0.043,
+      "252": 0.023,
+      "487": 0
+    },
+    "stoploss": {
+      "stoploss": -0.294
+    },
+    "entry": {
+      "leverage_val": 3
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-08-27 15:23:16.647362+00:00"
+}

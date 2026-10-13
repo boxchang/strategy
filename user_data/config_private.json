@@ -1,0 +1,158 @@
+{
+    "max_open_trades": 20,
+    "stake_currency": "USDT",
+    "stake_amount": 300,
+    "tradable_balance_ratio": 1.0,
+    "dry_run_wallet": 10000,
+    "fiat_display_currency": "",
+    "strategy": "SimpleRSIStrategy",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "leverage": 20,
+    "stoploss_on_exchange": true,
+	"stoploss": -1,
+    "dry_run": true,
+    "cancel_open_orders_on_exit": false,
+    "max_entry_position_adjustment": 10,
+    "unfilledtimeout": {
+        "unit": "minutes",
+        "enter": 10,
+        "exit": 30
+    },
+
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+    },
+
+    "entry_pricing": {
+        "price_side": "same",
+        "ask_last_balance": 0,
+        "use_order_book": true,
+        "order_book_top": 2,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 2
+    },
+
+    "exchange": {
+        "name": "binance",
+		"key": "eNsGDnX06k2JP5vDicMWUkIbayYBH9FPR9ZtEc2ryy9G1lOFLdLpGyCLITv6kPqs",
+		"secret": "YCtkYVMRWBodBaFbJnKsdaq1picxYOG0g1sWt2OsPMauceJWykqa4Z3ez1SU20Y9",
+        "ccxt_config": {
+            "enableRateLimit": true
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 200
+        },
+        "pair_whitelist": [
+            "DRAM\/USDT:USDT",
+            "NATGAS\/USDT:USDT",
+            "BABA\/USDT:USDT",
+            "CRWV\/USDT:USDT",
+            "V\/USDT:USDT",
+            "BRKB\/USDT:USDT",
+            "WMT\/USDT:USDT",
+            "SPY\/USDT:USDT",
+            "SOXL\/USDT:USDT",
+            "QQQ\/USDT:USDT",
+            "META\/USDT:USDT",
+            "MSTR\/USDT:USDT",
+            "ORCL\/USDT:USDT",
+            "MRVL\/USDT:USDT",
+            "HOOD\/USDT:USDT",
+            "EWY\/USDT:USDT",
+            "EWJ\/USDT:USDT",
+            "CBRS\/USDT:USDT",
+            "COIN\/USDT:USDT",
+            "USAR\/USDT:USDT",
+            "AVGO\/USDT:USDT",
+            "GOOGL\/USDT:USDT",
+            "AMZN\/USDT:USDT",
+            "AAPL\/USDT:USDT",
+            "TSLA\/USDT:USDT",
+            "AMD\/USDT:USDT",
+            "NVDA\/USDT:USDT",
+            "INTC\/USDT:USDT",
+            "SNDK\/USDT:USDT",
+            "MU\/USDT:USDT",
+            "TSM\/USDT:USDT",
+            "DIS\/USDT:USDT",
+            "LITE\/USDT:USDT",
+            "PAYP\/USDT:USDT",
+            "CRCL\/USDT:USDT",
+            "JPM\/USDT:USDT",
+            "HD\/USDT:USDT",
+            "MSFT\/USDT:USDT",
+            "CSCO\/USDT:USDT",
+            "UBER\/USDT:USDT",
+            "QCOM\/USDT:USDT",
+            "RKLB\/USDT:USDT"
+        ],
+        "pair_blacklist": [
+            "COIN\/USDT:USDT",
+            "PAYP\/USDT:USDT",
+            "HOOD\/USDT:USDT",
+            "BABA\/USDT:USDT",
+            "TSLA\/USDT:USDT",
+            "COPPER\/USDT:USDT",
+            "MU\/USDT:USDT",
+            "SNDK\/USDT:USDT",
+            "CRCL\/USDT:USDT",
+            "DRAM\/USDT:USDT",
+            "WMT\/USDT:USDT",
+            "LITE\/USDT:USDT",
+            "QCOM\/USDT:USDT",
+            "SOXL\/USDT:USDT",
+            "MRVL\/USDT:USDT",
+            "PLTR\/USDT:USDT",
+            "NATGAS\/USDT:USDT",
+            "MSTR\/USDT:USDT"
+        ]
+    },
+
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+
+    "telegram": {
+        "enabled": true,
+        "token": "8426148460:AAG54gEfLPAaPdtoafMfBJ1fYUPNDt4i6uw",
+        "chat_id": "8665335878"
+    },
+
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8000,
+        "username": "luxy",
+        "password": "luxy#20201010",
+        "jwt_secret_key": "9f2c8a7d3b4e5f6a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4",
+        "CORS_origins": ["*"]
+    },
+
+    "datadir": "/freqtrade/user_data/data",
+    "bot_name": "box_private",
+    "initial_state": "running",
+    "force_entry_enable": false,
+
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}

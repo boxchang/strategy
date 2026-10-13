@@ -1,0 +1,35 @@
+{
+  "strategy_name": "SimpleRSIStrategy",
+  "params": {
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 4
+    },
+    "buy": {
+      "buy_kd_range": 15,
+      "buy_kd_trend": 29
+    },
+    "sell": {
+      "exit_kd": 80
+    },
+    "roi": {
+      "0": 0.243,
+      "71": 0.131,
+      "230": 0.059,
+      "588": 0
+    },
+    "stoploss": {
+      "stoploss": -0.175
+    },
+    "entry": {
+      "leverage_val": 1
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-08-27 15:13:23.910334+00:00"
+}

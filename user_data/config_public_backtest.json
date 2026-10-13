@@ -1,0 +1,101 @@
+{
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "tradable_balance_ratio": 1.0,
+    "dry_run_wallet": 2000,
+    "fiat_display_currency": "",
+    "strategy": "SimpleRSIShortStrategy",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "leverage": 20,
+    "stoploss_on_exchange": true,
+	"stoploss": -0.10,
+    "dry_run": false,
+    "cancel_open_orders_on_exit": false,
+    "max_entry_position_adjustment": 10,
+    "unfilledtimeout": {
+        "unit": "minutes",
+        "enter": 10,
+        "exit": 30
+    },
+
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+    },
+
+    "entry_pricing": {
+        "price_side": "same",
+        "ask_last_balance": 0,
+        "use_order_book": true,
+        "order_book_top": 2,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 2
+    },
+
+    "exchange": {
+        "name": "binance",
+		"key": "0JY2rYSPME3BTgh5cSFNwibUxF8daKYCfCCbH2mun7WrSzmVbOIKMHqC7U6rxF2D",
+		"secret": "TCpaVuTJ1SMhNVCmC3pKi5reJbsZzilnNYp0xe48fT1ZJLuIoZ1CgOmsCqe0S8br",
+        "ccxt_config": {
+            "enableRateLimit": true
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 200
+        },
+        "pair_whitelist": [
+            "BZ\/USDT:USDT",
+            "CL\/USDT:USDT"
+        ],
+        "pair_blacklist": [
+            
+        ]
+    },
+
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+
+    "telegram": {
+        "enabled": true,
+        "token": "8978089888:AAE2E374AlGZbmaqjoQ_EoV8gCsuoYGsU70",
+        "chat_id": "8665335878"
+    },
+
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8000,
+        "username": "luxy",
+        "password": "luxy#20201010",
+        "jwt_secret_key": "9f2c8a7d3b4e5f6a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4",
+        "CORS_origins": ["*"]
+    },
+
+    "datadir": "/freqtrade/user_data/data",
+    "bot_name": "box_public",
+    "initial_state": "running",
+    "force_entry_enable": false,
+
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}

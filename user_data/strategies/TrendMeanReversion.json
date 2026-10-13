@@ -1,0 +1,38 @@
+{
+  "strategy_name": "TrendMeanReversion",
+  "params": {
+    "roi": {
+      "0": 0.05,
+      "30": 0.03,
+      "60": 0.01
+    },
+    "stoploss": {
+      "stoploss": -0.1
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "mr_rsi_buy": 35,
+      "mr_rsi_sell": 85,
+      "mr_stoch_buy": 26,
+      "mr_stoch_sell": 73,
+      "trend_adx_min": 20,
+      "trend_ema_period": 227,
+      "trend_rsi_buy": 65,
+      "trend_rsi_sell": 48
+    },
+    "sell": {
+      "exit_rsi_long": 85,
+      "exit_rsi_short": 32
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-09-06 14:13:37.166406+00:00"
+}

@@ -1,0 +1,185 @@
+2026-10-13 12:17:16,141 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:16,831 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:16,832 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:21,142 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:21,844 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:21,844 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:26,143 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:26,952 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:26,953 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:31,143 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:31,817 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:31,818 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:36,145 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:36,870 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:36,870 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:41,146 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:41,827 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:41,828 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:46,148 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:46,825 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:46,826 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:51,146 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:51,823 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:51,824 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:17:56,022 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:17:56,148 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:17:56,830 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:17:56,831 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:01,147 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:01,826 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:01,826 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:06,148 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:06,827 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:06,828 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:11,150 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:11,832 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:11,833 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:16,150 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:16,832 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:16,832 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:21,155 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:21,836 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:21,837 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:26,192 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:26,870 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:26,870 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:31,150 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:31,825 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:31,826 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:36,152 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:36,836 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:36,837 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:41,155 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:41,832 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:41,833 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:46,154 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:46,845 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:46,845 - freqtrade.freqtradebot - WARNING - Unable to create trade for SNDK/USDT:USDT: Available balance (87.83683657999995 USDT) is lower than stake amount (500 USDT)
+2026-10-13 12:18:51,155 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:51,532 - freqtrade.freqtradebot - INFO - Exit for MU/USDT:USDT detected. Reason: roi
+2026-10-13 12:18:52,517 - freqtrade.freqtradebot - INFO - Skipping cancelling stoploss on exchange for Trade(id=104, pair=MU/USDT:USDT, amount=0.52, is_short=True, leverage=1, open_rate=954.98, open_since=2026-10-13 11:00:33).
+2026-10-13 12:18:52,518 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:52,630 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 104, 'exchange': 'Binance', 'pair': 'MU/USDT:USDT', 'leverage': 1.0, 'direction': 'Short', 'gain': 'profit', 'limit': 944.99, 'order_rate': 944.99, 'order_type': 'limit', 'amount': 0.52, 'open_rate': 954.98, 'close_rate': 944.99, 'current_rate': 944.99, 'profit_amount': 4.99720312, 'profit_ratio': 0.01006506, 'buy_tag': 'trend_short', 'enter_tag': 'trend_short', 'exit_reason': 'roi', 'open_date': datetime.datetime(2026, 10, 13, 11, 0, 33, 261275, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 10, 13, 12, 18, 52, 630862, tzinfo=datetime.timezone.utc), 'stake_amount': 496.5896, 'stake_currency': 'USDT', 'base_currency': 'MU', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 0.0, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-10-13 12:18:52,631 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=104, pair=MU/USDT:USDT, amount=0.52, is_short=True, leverage=1, open_rate=954.98, open_since=2026-10-13 11:00:33)
+2026-10-13 12:18:52,635 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=104, pair=MU/USDT:USDT, amount=0.52, is_short=True, leverage=1, open_rate=954.98, open_since=2026-10-13 11:00:33) [buy]: 0.2456974 USDT - rate: 0.0005
+2026-10-13 12:18:52,635 - freqtrade.persistence.trade_model - INFO - Updating trade (id=104) ...
+2026-10-13 12:18:52,635 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=104, pair=MU/USDT:USDT, amount=0.52, is_short=True, leverage=1, open_rate=954.98, open_since=2026-10-13 11:00:33).
+2026-10-13 12:18:52,636 - freqtrade.persistence.trade_model - INFO - Marking Trade(id=104, pair=MU/USDT:USDT, amount=0.52, is_short=True, leverage=1, open_rate=954.98, open_since=closed) as closed as the trade is fulfilled and found no open orders for it.
+2026-10-13 12:18:52,638 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:52,639 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 104, 'exchange': 'Binance', 'pair': 'MU/USDT:USDT', 'leverage': 1.0, 'direction': 'Short', 'gain': 'profit', 'limit': 944.99, 'order_rate': 944.99, 'order_type': 'limit', 'amount': 0.52, 'open_rate': 954.98, 'close_rate': 944.99, 'current_rate': None, 'profit_amount': 4.84978468, 'profit_ratio': 0.00976814, 'buy_tag': 'trend_short', 'enter_tag': 'trend_short', 'exit_reason': 'roi', 'open_date': datetime.datetime(2026, 10, 13, 11, 0, 33, 261275, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 10, 13, 12, 18, 52, 630000, tzinfo=datetime.timezone.utc), 'stake_amount': 496.5896, 'stake_currency': 'USDT', 'base_currency': 'MU', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 4.84978468, 'final_profit_ratio': 0.009768136165087213, 'is_final_exit': True}
+2026-10-13 12:18:52,642 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:52,869 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:52,981 - freqtrade.freqtradebot - INFO - Short signal found: about create a new trade for SNDK/USDT:USDT with stake_amount: 500 and price: 1427.2 ...
+2026-10-13 12:18:53,089 - freqtrade.freqtradebot - INFO - Order dry_run_sell_SNDK/USDT:USDT_7f246c97-bd05-495b-ad5c-f7e2ca189bb5 was created for SNDK/USDT:USDT and status is open.
+2026-10-13 12:18:53,624 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:53,625 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 105, 'type': entry, 'buy_tag': 'trend_short', 'enter_tag': 'trend_short', 'exchange': 'Binance', 'pair': 'SNDK/USDT:USDT', 'leverage': 1.0, 'direction': 'Short', 'limit': 1427.2, 'order_rate': 1427.2, 'open_rate': 1427.2, 'order_type': 'limit', 'stake_amount': 500.0, 'stake_currency': 'USDT', 'base_currency': 'SNDK', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.35, 'open_date': datetime.datetime(2026, 10, 13, 12, 18, 53, 89900, tzinfo=datetime.timezone.utc), 'current_rate': 1427.2, 'sub_trade': False}
+2026-10-13 12:18:56,030 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:18:56,158 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:18:56,396 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=105, pair=SNDK/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=1427.2, open_since=2026-10-13 12:18:53)
+2026-10-13 12:18:56,407 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=105, pair=SNDK/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=1427.2, open_since=2026-10-13 12:18:53) [sell]: 0.099904 USDT - rate: 0.0002
+2026-10-13 12:18:56,408 - freqtrade.persistence.trade_model - INFO - Updating trade (id=105) ...
+2026-10-13 12:18:56,408 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=105, pair=SNDK/USDT:USDT, amount=0.35, is_short=True, leverage=1, open_rate=1427.2, open_since=2026-10-13 12:18:53).
+2026-10-13 12:18:56,521 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-13 12:18:56,533 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 105, 'type': entry_fill, 'buy_tag': 'trend_short', 'enter_tag': 'trend_short', 'exchange': 'Binance', 'pair': 'SNDK/USDT:USDT', 'leverage': 1.0, 'direction': 'Short', 'limit': 1427.2, 'order_rate': 1427.2, 'open_rate': 1427.2, 'order_type': 'limit', 'stake_amount': 499.52, 'stake_currency': 'USDT', 'base_currency': 'SNDK', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.35, 'open_date': datetime.datetime(2026, 10, 13, 12, 18, 53, 89900, tzinfo=datetime.timezone.utc), 'current_rate': 1427.2, 'sub_trade': False}
+2026-10-13 12:19:01,156 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:06,160 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:11,158 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:16,159 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:21,159 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:26,159 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:31,158 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:36,160 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:41,171 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:46,162 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:51,162 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:19:56,037 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:19:56,163 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:01,160 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:02,037 - uvicorn.error - INFO - 113.185.81.255:30701 - "WebSocket /api/v1/message/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6eyJ1IjoibHV4eSJ9LCJleHAiOjE3OTE4OTQ5MDEsImlhdCI6MTc5MTg5NDAwMSwidHlwZSI6ImFjY2VzcyJ9.qruQL9mvJ8ehVCZA8cVSI22YFbf-4GTW7l_S1xm0OsY" [accepted]
+2026-10-13 12:20:02,038 - freqtrade.rpc.api_server.ws.channel - INFO - Connected to channel - WebSocketChannel(b55fdd9c, ('113.185.81.255', 30701))
+2026-10-13 12:20:02,039 - uvicorn.error - INFO - connection open
+2026-10-13 12:20:06,160 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:11,165 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:16,165 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:21,163 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:26,164 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:31,176 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:36,162 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:41,166 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:46,170 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:51,167 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:20:56,045 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:20:56,168 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:01,172 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:06,172 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:11,173 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:16,175 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:21,178 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:26,175 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:31,179 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:36,177 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:41,181 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:46,181 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:51,181 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:21:56,058 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:21:56,183 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:01,184 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:06,183 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:11,182 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:16,185 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:21,186 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:26,187 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:31,188 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:36,189 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:41,191 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:46,190 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:51,193 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:22:56,068 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:22:56,192 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:01,196 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:06,193 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:11,193 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:16,194 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:21,197 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:26,195 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:31,200 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:36,199 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:41,199 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:46,198 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:51,200 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:23:56,076 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:23:56,198 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:01,204 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:06,202 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:11,204 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:16,205 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:21,207 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:26,205 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:31,208 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:36,208 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:41,211 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:46,210 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:51,217 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:24:56,087 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:24:56,210 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:01,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:06,220 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:11,218 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:16,218 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:21,219 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:26,221 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:31,223 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:36,224 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:41,228 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:46,226 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:51,230 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:25:56,104 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.4', state='RUNNING'
+2026-10-13 12:25:56,229 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:01,241 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:06,231 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:11,232 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:16,230 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:21,230 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:26,232 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)
+2026-10-13 12:26:31,229 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=101, pair=TSM/USDT:USDT, amount=0, is_short=True, leverage=1, open_rate=445.91, open_since=2026-10-12 23:10:12)

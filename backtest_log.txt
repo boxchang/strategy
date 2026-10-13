@@ -1,0 +1,163 @@
+2026-06-07 13:11:53,422 - freqtrade - INFO - freqtrade 2026.4
+2026-06-07 13:11:53,594 - numexpr.utils - INFO - NumExpr defaulting to 16 threads.
+2026-06-07 13:11:54,466 - freqtrade.configuration.load_config - INFO - Using config: user_data/config_private_backtest.json ...
+2026-06-07 13:11:54,468 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-06-07 13:11:54,468[90m - [0m[95mfreqtrade.loggers[0m[90m - [0m[34mINFO[0m[90m - [0mLogfile configured
+2026-06-07 13:11:54,468[90m - [0m[95mfreqtrade.loggers[0m[90m - [0m[34mINFO[0m[90m - [0mVerbosity set to 1
+2026-06-07 13:11:54,468[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mParameter -i/--timeframe detected ... Using timeframe: 15m ...
+2026-06-07 13:11:54,468[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mUsing max_open_trades: 20 ...
+2026-06-07 13:11:54,469[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mParameter --timerange detected: 20260604-20260607 ...
+2026-06-07 13:11:54,482[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mUsing user-data directory: /freqtrade/user_data ...
+2026-06-07 13:11:54,482[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mUsing data directory: /freqtrade/user_data/data/binance ...
+2026-06-07 13:11:54,483[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mParameter --cache=day detected ...
+2026-06-07 13:11:54,483[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mUsing pairs ['NVDA/USDT:USDT']
+2026-06-07 13:11:54,483[90m - [0m[95mfreqtrade.configuration.configuration[0m[90m - [0m[34mINFO[0m[90m - [0mFilter trades by timerange: 20260604-20260607
+2026-06-07 13:11:54,484[90m - [0m[95mfreqtrade.exchange.check_exchange[0m[90m - [0m[34mINFO[0m[90m - [0mChecking exchange...
+2026-06-07 13:11:54,489[90m - [0m[95mfreqtrade.exchange.check_exchange[0m[90m - [0m[34mINFO[0m[90m - [0mExchange "binance" is officially supported by the Freqtrade development team.
+2026-06-07 13:11:54,489[90m - [0m[95mfreqtrade.configuration.config_validation[0m[90m - [0m[34mINFO[0m[90m - [0mValidating configuration ...
+2026-06-07 13:11:54,490[90m - [0m[95mfreqtrade.commands.optimize_commands[0m[90m - [0m[34mINFO[0m[90m - [0mStarting freqtrade in Backtesting mode
+2026-06-07 13:11:54,490[90m - [0m[95mfreqtrade.exchange.exchange[0m[90m - [0m[34mINFO[0m[90m - [0mInstance is running with dry_run enabled
+2026-06-07 13:11:54,490[90m - [0m[95mfreqtrade.exchange.exchange[0m[90m - [0m[34mINFO[0m[90m - [0mUsing CCXT 4.5.50
+2026-06-07 13:11:54,491[90m - [0m[95mfreqtrade.exchange.exchange[0m[90m - [0m[34mINFO[0m[90m - [0mApplying additional ccxt config: {'options': {'defaultType': 'swap'}, 'enableRateLimit': True}
+2026-06-07 13:11:54,494[90m - [0m[95mfreqtrade.exchange.exchange[0m[90m - [0m[34mINFO[0m[90m - [0mApplying additional ccxt config: {'options': {'defaultType': 'swap'}, 'enableRateLimit': True, 'rateLimit': 200}
+2026-06-07 13:11:54,499[90m - [0m[95mfreqtrade.exchange.exchange[0m[90m - [0m[34mINFO[0m[90m - [0mUsing Exchange "Binance"
+2026-06-07 13:11:54,499[90m - [0m[95mfreqtrade.exchange.exchange[0m[90m - [0m[32mDEBUG[0m[90m - [0mPerforming scheduled market reload..
+2026-06-07 13:11:56,037[90m - [0m[95mfreqtrade.resolvers.exchange_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mUsing resolved exchange 'Binance'...
+2026-06-07 13:11:56,037[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSearching for IStrategy SimpleRSIStrategy in '/freqtrade/user_data/strategies'
+2026-06-07 13:11:56,038[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/AdvancedGridStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,038[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/AnchorRSIStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,038[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mIgnoring /freqtrade/user_data/strategies/Best5m.json
+2026-06-07 13:11:56,039[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/Best5m.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,039[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/BigWaveTrendStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,039[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/CombinedBinHAndClucV8.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,039[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/DCAExampleStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,039[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mIgnoring /freqtrade/user_data/strategies/DailyLeverageAccumulator.json
+2026-06-07 13:11:56,040[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/DailyLeverageAccumulator.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,040[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/E0V1E_6.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,040[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/ElliotV5_SMA.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,040[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/FAdxSmaStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,040[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/FOttStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,041[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/FReinforcedStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,041[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/FSampleStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,041[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/FSupertrendStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,041[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/IchimokuStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,041[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/LowRSIStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,041[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/LucyStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,042[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/MA7MA25Cross.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,042[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/QianLongStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,042[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/RSIGridStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,042[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/RSI_EMAStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,042[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/SimpleMovingAverageStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,043[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mIgnoring /freqtrade/user_data/strategies/SimpleRSIShortStrategy.json
+2026-06-07 13:11:56,043[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/user_data/strategies/SimpleRSIShortStrategy.py as it does not contain class SimpleRSIStrategy.
+2026-06-07 13:11:56,050[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[34mINFO[0m[90m - [0mUsing resolved strategy SimpleRSIStrategy from '/freqtrade/user_data/strategies/SimpleRSIStrategy.py'...
+2026-06-07 13:11:56,051[90m - [0m[95mfreqtrade.strategy.hyper[0m[90m - [0m[34mINFO[0m[90m - [0mFound no parameter file.
+2026-06-07 13:11:56,051[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'timeframe' with value from the configuration: 15m.
+2026-06-07 13:11:56,051[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'stoploss' with value from the configuration: -1.
+2026-06-07 13:11:56,051[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 
+'market', 'force_entry': 'market', 'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60}.
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'stake_currency' with value from the configuration: USDT.
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'stake_amount' with value from the configuration: 200.
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'unfilledtimeout' with value from the configuration: {'unit': 'minutes', 'enter': 10, 'exit': 30, 
+'exit_timeout_count': 0}.
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'max_entry_position_adjustment' with value from the configuration: 10.
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mOverride strategy 'max_open_trades' with value from the configuration: 20.
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using minimal_roi: {}
+2026-06-07 13:11:56,052[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using timeframe: 15m
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using stoploss: -1
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using trailing_stop: True
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using trailing_stop_positive: 0.05
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using trailing_stop_positive_offset: 0.08
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using trailing_only_offset_is_reached: True
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using use_custom_stoploss: False
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using process_only_new_candles: True
+2026-06-07 13:11:56,053[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using order_types: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'market', 'force_entry': 'market', 
+'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60}
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using stake_currency: USDT
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using stake_amount: 200
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using startup_candle_count: 0
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using unfilledtimeout: {'unit': 'minutes', 'enter': 10, 'exit': 30, 'exit_timeout_count': 0}
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using use_exit_signal: True
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using exit_profit_only: False
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using ignore_roi_if_entry_signal: False
+2026-06-07 13:11:56,054[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using exit_profit_offset: 0.0
+2026-06-07 13:11:56,055[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using disable_dataframe_checks: False
+2026-06-07 13:11:56,055[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using ignore_buying_expired_candle_after: 0
+2026-06-07 13:11:56,055[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using position_adjustment_enable: False
+2026-06-07 13:11:56,055[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using max_entry_position_adjustment: 10
+2026-06-07 13:11:56,055[90m - [0m[95mfreqtrade.resolvers.strategy_resolver[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy using max_open_trades: 20
+2026-06-07 13:11:56,055[90m - [0m[95mfreqtrade.configuration.config_validation[0m[90m - [0m[34mINFO[0m[90m - [0mValidating configuration ...
+2026-06-07 13:11:56,056[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSearching for IPairList StaticPairList in '/freqtrade/freqtrade/plugins/pairlist'
+2026-06-07 13:11:56,057[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/AgeFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,057[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/CrossMarketPairList.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,057[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/DelistFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,057[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/FullTradesFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,058[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/IPairList.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,058[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/MarketCapPairList.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,058[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/OffsetFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,058[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/PercentChangePairList.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,058[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/PerformanceFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,059[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/PrecisionFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,059[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/PriceFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,059[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/ProducerPairList.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,059[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/RemotePairList.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,059[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/ShuffleFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,059[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[32mDEBUG[0m[90m - [0mSkipping /freqtrade/freqtrade/plugins/pairlist/SpreadFilter.py as it does not contain class StaticPairList.
+2026-06-07 13:11:56,060[90m - [0m[95mfreqtrade.resolvers.iresolver[0m[90m - [0m[34mINFO[0m[90m - [0mUsing resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-06-07 13:11:56,076[90m - [0m[95mfreqtrade.plugins.pairlistmanager[0m[90m - [0m[32mDEBUG[0m[90m - [0mWhitelist with 1 pairs: ['NVDA/USDT:USDT']
+2026-06-07 13:11:56,076[90m - [0m[95mfreqtrade.optimize.backtesting[0m[90m - [0m[34mINFO[0m[90m - [0mUsing fee 0.0500% - worst case fee from exchange (lowest tier).
+2026-06-07 13:11:56,099[90m - [0m[95mfreqtrade.optimize.backtesting[0m[90m - [0m[34mINFO[0m[90m - [0mLoading data from 2026-06-04 00:00:00 up to 2026-06-07 00:00:00 (3 days).
+2026-06-07 13:11:56,101[90m - [0m[95mfreqtrade.data.history.datahandlers.idatahandler[0m[90m - [0m[33mWARNING[0m[90m - [0mNVDA/USDT:USDT, funding_rate, 1h, data ends at 2026-06-06 16:00:00
+2026-06-07 13:11:56,116[90m - [0m[95mfreqtrade.optimize.backtesting[0m[90m - [0m[34mINFO[0m[90m - [0mDataload complete. Calculating indicators
+2026-06-07 13:11:56,118[90m - [0m[95mfreqtrade.optimize.backtesting[0m[90m - [0m[34mINFO[0m[90m - [0mRunning backtesting for Strategy SimpleRSIStrategy
+2026-06-07 13:11:56,118[90m - [0m[95mfreqtrade.strategy.hyper[0m[90m - [0m[34mINFO[0m[90m - [0mNo params for buy found, using default values.
+2026-06-07 13:11:56,118[90m - [0m[95mfreqtrade.strategy.hyper[0m[90m - [0m[34mINFO[0m[90m - [0mStrategy Parameter(default): buy_rsi = 10
+2026-06-07 13:11:56,119[90m - [0m[95mfreqtrade.strategy.interface[0m[90m - [0m[32mDEBUG[0m[90m - [0mPopulating indicators for pair NVDA/USDT:USDT.
+2026-06-07 13:11:56,120[90m - [0m[95mfreqtrade.optimize.backtesting[0m[90m - [0m[34mINFO[0m[90m - [0mBacktesting with data from 2026-06-04 00:00:00 up to 2026-06-07 00:00:00 (3 days).
+2026-06-07 13:11:56,121[90m - [0m[95mfreqtrade.strategy.interface[0m[90m - [0m[32mDEBUG[0m[90m - [0mPopulating enter signals for pair NVDA/USDT:USDT.
+2026-06-07 13:11:56,122[90m - [0m[95mfreqtrade.strategy.interface[0m[90m - [0m[32mDEBUG[0m[90m - [0mPopulating exit signals for pair NVDA/USDT:USDT.
+2026-06-07 13:11:56,149[90m - [0m[95mfreqtrade.misc[0m[90m - [0m[34mINFO[0m[90m - [0mdumping json to "/freqtrade/user_data/backtest_results/backtest-result-2026-06-07_13-11-56.meta.json"
+2026-06-07 13:11:56,149[90m - [0m[95mfreqtrade.misc[0m[90m - [0m[32mDEBUG[0m[90m - [0mdone writing json to "/freqtrade/user_data/backtest_results/backtest-result-2026-06-07_13-11-56.meta.json"
+2026-06-07 13:11:56,150[90m - [0m[95mfreqtrade.misc[0m[90m - [0m[32mDEBUG[0m[90m - [0mdone writing json to "/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy SimpleRSIStrategy
+[3m                                                BACKTESTING REPORT                                                 [0m
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1m          Pair[0m[1m [0m┃[1m [0m[1mTrades[0m[1m [0m┃[1m [0m[1mAvg Profit %[0m[1m [0m┃[1m [0m[1mTot Profit USDT[0m[1m [0m┃[1m [0m[1mTot Profit %[0m[1m [0m┃[1m [0m[1mAvg Duration[0m[1m [0m┃[1m [0m[1m Win  Draw  Loss  Win%[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ NVDA/USDT:USDT │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+│          TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+[3m                                         LEFT OPEN TRADES REPORT                                          [0m
+┏━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1m Pair[0m[1m [0m┃[1m [0m[1mTrades[0m[1m [0m┃[1m [0m[1mAvg Profit %[0m[1m [0m┃[1m [0m[1mTot Profit USDT[0m[1m [0m┃[1m [0m[1mTot Profit %[0m[1m [0m┃[1m [0m[1mAvg Duration[0m[1m [0m┃[1m [0m[1m Win  Draw  Loss  Win%[0m[1m [0m┃
+┡━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+[3m                                                ENTER TAG STATS                                                [0m
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mEnter Tag[0m[1m [0m┃[1m [0m[1mEntries[0m[1m [0m┃[1m [0m[1mAvg Profit %[0m[1m [0m┃[1m [0m[1mTot Profit USDT[0m[1m [0m┃[1m [0m[1mTot Profit %[0m[1m [0m┃[1m [0m[1mAvg Duration[0m[1m [0m┃[1m [0m[1m Win  Draw  Loss  Win%[0m[1m [0m┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     TOTAL │       0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+[3m                                               EXIT REASON STATS                                               [0m
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mExit Reason[0m[1m [0m┃[1m [0m[1mExits[0m[1m [0m┃[1m [0m[1mAvg Profit %[0m[1m [0m┃[1m [0m[1mTot Profit USDT[0m[1m [0m┃[1m [0m[1mTot Profit %[0m[1m [0m┃[1m [0m[1mAvg Duration[0m[1m [0m┃[1m [0m[1m Win  Draw  Loss  Win%[0m[1m [0m┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       TOTAL │     0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└─────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+[3m                                                      MIXED TAG STATS                                                       [0m
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mEnter Tag[0m[1m [0m┃[1m [0m[1mExit Reason[0m[1m [0m┃[1m [0m[1mTrades[0m[1m [0m┃[1m [0m[1mAvg Profit %[0m[1m [0m┃[1m [0m[1mTot Profit USDT[0m[1m [0m┃[1m [0m[1mTot Profit %[0m[1m [0m┃[1m [0m[1mAvg Duration[0m[1m [0m┃[1m [0m[1m Win  Draw  Loss  Win%[0m[1m [0m┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     TOTAL │             │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────────┴─────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+No trades made. Your starting balance was 10000 USDT, and your stake was 200 USDT.
+
+Backtested 2026-06-04 00:00:00 -> 2026-06-07 00:00:00 | Max open trades : 1
+[3m                                                           STRATEGY SUMMARY                                                           [0m
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃[1m [0m[1m         Strategy[0m[1m [0m┃[1m [0m[1mTrades[0m[1m [0m┃[1m [0m[1mAvg Profit %[0m[1m [0m┃[1m [0m[1mTot Profit USDT[0m[1m [0m┃[1m [0m[1mTot Profit %[0m[1m [0m┃[1m [0m[1mAvg Duration[0m[1m [0m┃[1m [0m[1m Win  Draw  Loss  Win%[0m[1m [0m┃[1m [0m[1m     Drawdown[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ SimpleRSIStrategy │      0 │         0.00 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │ 0 USDT  0.00% │
+└───────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴───────────────┘
