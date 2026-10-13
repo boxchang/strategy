@@ -1,0 +1,28 @@
+# 檔案名稱 .gitignore
+#.gitignore_dir
+
+# 忽略 secret.yml 檔案
+secret.yml
+
+# 忽略 config 目錄下的 database.yml 檔案
+config/database.yml
+
+# 忽略所有 db 目錄下附檔名是 .sqlite3 的檔案
+/db/*.sqlite3
+
+# 忽略所有附檔名是 .tmp 的檔案
+*.tmp
+
+*.py[co]
+__pycache__
+*__pycache__
+.credentials/
+.vscode/
+.venv/
+.idea
+.idea/*
+*venv
+*.sqlite3
+.idea
+.idea/*
+*.log
