@@ -16,35 +16,39 @@ services:
   #     --config /freqtrade/user_data/config_private.json
   #     --strategy SimpleRSIStrategy
 
-  strategy2:
-    image: freqtradeorg/freqtrade:stable
-    container_name: person
-    restart: unless-stopped
-    volumes:
-      - ./user_data:/freqtrade/user_data
-    ports:
-      - "8001:8000"
-    command: >
-      trade
-      --logfile /freqtrade/user_data/logs/freqtrade2.log
-      --db-url sqlite:////freqtrade/user_data/trades_strategy_20260725.sqlite
-      --config /freqtrade/user_data/config_person.json
-      --strategy SimpleKDStrategy
+  # strategy2:
+  #   image: freqtradeorg/freqtrade:stable
+  #   container_name: person
+  #   restart: unless-stopped
+  #   environment:
+  #     - TZ=Asia/Ho_Chi_Minh
+  #   volumes:
+  #     - ./user_data:/freqtrade/user_data
+  #   ports:
+  #     - "8001:8000"
+  #   command: >
+  #     trade
+  #     --logfile /freqtrade/user_data/logs/freqtrade2.log
+  #     --db-url sqlite:////freqtrade/user_data/trades_strategy_20260725.sqlite
+  #     --config /freqtrade/user_data/config_person.json
+  #     --strategy SimpleKDStrategy
 
-  strategy3:
-    image: freqtradeorg/freqtrade:stable
-    container_name: lucy_public
-    restart: unless-stopped
-    volumes:
-      - ./user_data:/freqtrade/user_data
-    ports:
-      - "8003:8000"
-    command: >
-      trade
-      --logfile /freqtrade/user_data/logs/freqtrade3.log
-      --db-url sqlite:////freqtrade/user_data/trades_strategy_lucy_20260725.sqlite
-      --config /freqtrade/user_data/config_lucy_public.json
-      --strategy LucyStrategy
+  # strategy3:
+  #   image: freqtradeorg/freqtrade:stable
+  #   container_name: lucy_public
+  #   restart: unless-stopped
+  #   environment:
+  #     - TZ=Asia/Ho_Chi_Minh
+  #   volumes:
+  #     - ./user_data:/freqtrade/user_data
+  #   ports:
+  #     - "8003:8000"
+  #   command: >
+  #     trade
+  #     --logfile /freqtrade/user_data/logs/freqtrade3.log
+  #     --db-url sqlite:////freqtrade/user_data/trades_strategy_lucy_20260725.sqlite
+  #     --config /freqtrade/user_data/config_lucy_public.json
+  #     --strategy LucyStrategy
 
   # box_public:
   #   image: freqtradeorg/freqtrade:stable
@@ -65,6 +69,8 @@ services:
     image: freqtradeorg/freqtrade:stable
     container_name: strategy01
     restart: unless-stopped
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
     volumes:
       - ./user_data:/freqtrade/user_data
     ports:
@@ -80,21 +86,25 @@ services:
     image: freqtradeorg/freqtrade:stable
     container_name: strategy02
     restart: unless-stopped
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
     volumes:
       - ./user_data:/freqtrade/user_data
     ports:
       - "8012:8000"
     command: >
       trade
-      --logfile /freqtrade/user_data/logs/strategy02.log
-      --db-url sqlite:////freqtrade/user_data/strategy02.sqlite
-      --config /freqtrade/user_data/strategy_config/strategy02.json
-      --strategy E0V1E_1
+      --logfile /freqtrade/user_data/logs/person.log
+      --db-url sqlite:////freqtrade/user_data/person.sqlite
+      --config /freqtrade/user_data/config_person.json
+      --strategy TrendMeanReversionL
 
   strategy03:
     image: freqtradeorg/freqtrade:stable
     container_name: strategy03
     restart: unless-stopped
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
     volumes:
       - ./user_data:/freqtrade/user_data
     ports:
@@ -110,6 +120,8 @@ services:
       image: freqtradeorg/freqtrade:stable
       container_name: strategy04
       restart: unless-stopped
+      environment:
+      - TZ=Asia/Ho_Chi_Minh
       volumes:
         - ./user_data:/freqtrade/user_data
       ports:
@@ -125,6 +137,8 @@ services:
       image: freqtradeorg/freqtrade:stable
       container_name: strategy05
       restart: unless-stopped
+      environment:
+      - TZ=Asia/Ho_Chi_Minh
       volumes:
         - ./user_data:/freqtrade/user_data
       ports:
@@ -134,4 +148,4 @@ services:
         --logfile /freqtrade/user_data/logs/strategy05.log
         --db-url sqlite:////freqtrade/user_data/strategy05.sqlite
         --config /freqtrade/user_data/strategy_config/strategy05.json
-        --strategy HighRsiShortDcaStrategy
+        --strategy TrendMeanReversionV4

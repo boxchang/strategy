@@ -1,11 +1,11 @@
 {
-    "max_open_trades": 2,
+    "max_open_trades": 4,
     "stake_currency": "USDT",
-    "stake_amount": 100,
+    "stake_amount": 500,
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 600,
+    "dry_run_wallet": 3000,
     "fiat_display_currency": "",
-    "strategy": "HighRsiShortDcaStrategy",
+    "strategy": "TrendMeanReversionV4",
     "trading_mode": "futures",
     "margin_mode": "isolated",
     "leverage": 10,
@@ -60,6 +60,10 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
+            "SNDK\/USDT:USDT",
+            "MU\/USDT:USDT",
+            "TSM\/USDT:USDT",
+            "NVDA\/USDT:USDT",
             "BZ\/USDT:USDT",
             "CL\/USDT:USDT"
         ],

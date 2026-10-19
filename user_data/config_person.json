@@ -1,16 +1,16 @@
 {
-    "max_open_trades": 4,
+    "max_open_trades": 1,
     "stake_currency": "USDT",
-    "stake_amount": 150,
+    "stake_amount": "unlimited",
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 2000,
+    "dry_run_wallet": 100,
     "fiat_display_currency": "",
-    "strategy": "SimpleKDStrategy",
+    "strategy": "TrendMeanReversionL",
     "trading_mode": "futures",
     "margin_mode": "isolated",
-    "leverage": 4,
+    "leverage": 1,
     "stoploss_on_exchange": true,
-    "dry_run": true,
+    "dry_run": false,
     "cancel_open_orders_on_exit": false,
     "position_adjustment_enable": false,
     "max_entry_position_adjustment": 10,
@@ -60,10 +60,7 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "TSM\/USDT:USDT",
-            "SNDK\/USDT:USDT",
-            "MU\/USDT:USDT",
-            "NVDA\/USDT:USDT"
+            "MU\/USDT:USDT"
         ],
         "pair_blacklist": [
             

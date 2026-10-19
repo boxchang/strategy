@@ -29,7 +29,7 @@ __pycache__
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
-/logs/
+*/logs/
 */data/
 */backtest_results/
 */hyperopt_results/
