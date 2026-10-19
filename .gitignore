@@ -34,3 +34,6 @@ __pycache__
 */backtest_results/
 */hyperopt_results/
 *.zip
+.env
+.env.*
+!.env.example

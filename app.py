@@ -3,6 +3,7 @@ import os
 import streamlit as st
 import pandas as pd
 import psycopg2
+import config
 
 # 頁面基本設定
 st.set_page_config(
@@ -16,11 +17,11 @@ st.title("🚀 Freqtrade 策略回測與自動化戰情室")
 # ==================== 資料庫連線函式 ====================
 def get_db_connection():
     return psycopg2.connect(
-        host="115.79.43.113",
+        host=config.DB_NAME,
         port="8000",
         database="postgres",
         user="ft_user",
-        password="luxy@20201010"
+        password=config.DB_PASSWORD
     )
 
 # ==================== 側邊欄：回測控制面板 ====================
@@ -81,7 +82,8 @@ if submitted:
             else:
                 # 組合指令：透過 bash 先 source 虛擬環境，再執行 python3
                 pairs_str = " ".join(selected_pairs)
-                api_key = os.environ["ANTHROPIC_API_KEY"]
+
+                api_key = config.ANTHROPIC_API_KEY
 
                 cmd_str = (
                     f"export ANTHROPIC_API_KEY='{api_key}' && "
