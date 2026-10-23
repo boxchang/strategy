@@ -1,16 +1,16 @@
 {
-    "max_open_trades": 1,
+    "max_open_trades": 3,
     "stake_currency": "USDT",
     "stake_amount": "unlimited",
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 100,
+    "dry_run_wallet": 1000,
     "fiat_display_currency": "",
-    "strategy": "TrendMeanReversionL",
+    "strategy": "EmaRsiStrategy",
     "trading_mode": "futures",
     "margin_mode": "isolated",
     "leverage": 1,
     "stoploss_on_exchange": true,
-    "dry_run": false,
+    "dry_run": true,
     "cancel_open_orders_on_exit": false,
     "position_adjustment_enable": false,
     "max_entry_position_adjustment": 10,
@@ -60,7 +60,22 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "MU\/USDT:USDT"
+            "NATGAS\/USDT:USDT",
+            "META\/USDT:USDT",
+            "HOOD\/USDT:USDT",
+            "GOOGL\/USDT:USDT",
+            "AAPL\/USDT:USDT",
+            "ANTHROPICUSDT\/USDT:USDT",
+            "NVO\/USDT:USDT",
+            "INTC\/USDT:USDT",
+            "SNDK\/USDT:USDT",
+            "MU\/USDT:USDT",
+            "TSM\/USDT:USDT",
+            "CRCL\/USDT:USDT",
+            "PLTR\/USDT:USDT",
+            "SKHYNIX\/USDT:USDT",
+            "OPENAI\/USDT:USDT",
+            "MSFT\/USDT:USDT"
         ],
         "pair_blacklist": [
             

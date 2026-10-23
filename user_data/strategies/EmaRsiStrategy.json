@@ -1,0 +1,51 @@
+{
+  "strategy_name": "EmaRsiStrategy",
+  "params": {
+    "roi": {
+      "0": 0.06,
+      "60": 0.035,
+      "180": 0.018,
+      "480": 0.005
+    },
+    "stoploss": {
+      "stoploss": -0.2
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "buy": {
+      "leverage_level": 1,
+      "mr_adx_max": 39,
+      "mr_rsi_buy": 18,
+      "mr_rsi_sell": 75,
+      "mr_stoch_buy": 15,
+      "mr_stoch_sell": 70,
+      "trend_adx_min": 33,
+      "trend_ema_period": 100,
+      "trend_rsi_buy": 64,
+      "trend_rsi_sell": 40,
+      "trend_slope_min": 0.0075
+    },
+    "sell": {
+      "exit_rsi_long": 65,
+      "exit_rsi_short": 31,
+      "gen_hold_hours": 12,
+      "lock_high_profit": 0.17,
+      "lock_high_sl": 0.021,
+      "lock_mid_profit": 0.03,
+      "lock_mid_sl": 0.001,
+      "mr_hold_hours": 10,
+      "mr_min_profit": 0.033,
+      "sl_atr_mult": 2.5,
+      "sl_base": 0.15
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-10-23 02:22:58.446367+00:00"
+}

@@ -1,9 +1,10 @@
 {
     "max_open_trades": 10,
     "stake_currency": "USDT",
-    "stake_amount": 90,
+    "stake_amount": 100,
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 100,
+    "trailing_stop": false,
+    "dry_run_wallet": 1000,
     "fiat_display_currency": "",
     "strategy": "TrendMeanReversionL",
     "trading_mode": "futures",
@@ -60,7 +61,8 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "MU\/USDT:USDT"
+            "BTC\/USDT:USDT",
+            "ETH\/USDT:USDT"
         ],
         "pair_blacklist": [
             

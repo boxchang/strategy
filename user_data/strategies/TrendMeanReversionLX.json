@@ -1,0 +1,50 @@
+{
+  "strategy_name": "TrendMeanReversionLX",
+  "params": {
+    "roi": {
+      "0": 0.06,
+      "60": 0.035,
+      "180": 0.018,
+      "480": 0.005
+    },
+    "stoploss": {
+      "stoploss": -0.2
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "leverage_level": 2,
+      "mr_rsi_buy": 21,
+      "mr_rsi_sell": 77,
+      "mr_stoch_buy": 24,
+      "mr_stoch_sell": 85,
+      "trend_adx_min": 28,
+      "trend_ema_period": 120,
+      "trend_rsi_buy": 63,
+      "trend_rsi_sell": 40,
+      "trend_slope_min": 0.0097
+    },
+    "sell": {
+      "exit_rsi_long": 80,
+      "exit_rsi_short": 23,
+      "gen_hold_hours": 22,
+      "lock_high_profit": 0.13,
+      "lock_high_sl": 0.03,
+      "lock_mid_profit": 0.03,
+      "lock_mid_sl": 0.009,
+      "mr_hold_hours": 11,
+      "mr_min_profit": 0.03,
+      "sl_atr_mult": 3.9,
+      "sl_base": 0.13
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-10-20 05:05:32.040301+00:00"
+}

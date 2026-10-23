@@ -1,0 +1,38 @@
+{
+  "strategy_name": "TEMA_ADX_CMO_Strategy",
+  "params": {
+    "roi": {
+      "0": 0.06,
+      "60": 0.035,
+      "180": 0.018,
+      "480": 0.005
+    },
+    "stoploss": {
+      "stoploss": -0.2
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "buy": {
+      "leverage_level": 1,
+      "adx_threshold": 34
+    },
+    "sell": {
+      "gen_hold_hours": 24,
+      "lock_high_profit": 0.09,
+      "lock_high_sl": 0.02,
+      "lock_mid_profit": 0.04,
+      "lock_mid_sl": 0.003,
+      "sl_atr_mult": 3.7,
+      "sl_base": 0.13
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-10-23 07:40:20.664183+00:00"
+}

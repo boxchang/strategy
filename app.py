@@ -17,10 +17,10 @@ st.title("🚀 Freqtrade 策略回測與自動化戰情室")
 # ==================== 資料庫連線函式 ====================
 def get_db_connection():
     return psycopg2.connect(
-        host=config.DB_NAME,
-        port="8000",
-        database="postgres",
-        user="ft_user",
+        host=config.DB_HOST,
+        port=config.DB_PORT,
+        database=config.DB_NAME,
+        user=config.DB_USER,
         password=config.DB_PASSWORD
     )
 
