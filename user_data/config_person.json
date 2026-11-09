@@ -60,7 +60,7 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            
+            "TSM\/USDT:USDT"
         ],
         "pair_blacklist": [
             
