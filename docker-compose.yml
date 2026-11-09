@@ -80,24 +80,27 @@ services:
   #     --logfile /freqtrade/user_data/logs/strategy01.log
   #     --db-url sqlite:////freqtrade/user_data/strategy01.sqlite
   #     --config /freqtrade/user_data/strategy_config/strategy01.json
-  #     --strategy TrendMeanReversionLX
+  #   logging:
+  #     driver: "json-file"
+  #     options:
+  #       max-size: "10m"   # 單個 log 檔最大 10MB
+  #       max-file: "3"     # 最多保留 3 個檔案（超過自動覆蓋舊的）
 
-  strategy02:
-    image: freqtradeorg/freqtrade:stable
-    container_name: strategy02
-    restart: unless-stopped
-    environment:
-      - TZ=Asia/Ho_Chi_Minh
-    volumes:
-      - ./user_data:/freqtrade/user_data
-    ports:
-      - "8012:8000"
-    command: >
-      trade
-      --logfile /freqtrade/user_data/logs/person.log
-      --db-url sqlite:////freqtrade/user_data/person.sqlite
-      --config /freqtrade/user_data/config_person.json
-      --strategy EmaRsiStrategy
+  # strategy02:
+  #   image: freqtradeorg/freqtrade:stable
+  #   container_name: strategy02
+  #   restart: unless-stopped
+  #   environment:
+  #     - TZ=Asia/Ho_Chi_Minh
+  #   volumes:
+  #     - ./user_data:/freqtrade/user_data
+  #   ports:
+  #     - "8012:8000"
+  #   command: >
+  #     trade
+  #     --logfile /freqtrade/user_data/logs/person.log
+  #     --db-url sqlite:////freqtrade/user_data/person.sqlite
+  #     --config /freqtrade/user_data/config_person.json
 
   # strategy03:
   #   image: freqtradeorg/freqtrade:stable
@@ -114,38 +117,45 @@ services:
   #     --logfile /freqtrade/user_data/logs/strategy03.log
   #     --db-url sqlite:////freqtrade/user_data/strategy03.sqlite
   #     --config /freqtrade/user_data/strategy_config/strategy03.json
-  #     --strategy TrendMeanReversion
 
-  # strategy04:
-  #     image: freqtradeorg/freqtrade:stable
-  #     container_name: strategy04
-  #     restart: unless-stopped
-  #     environment:
-  #     - TZ=Asia/Ho_Chi_Minh
-  #     volumes:
-  #       - ./user_data:/freqtrade/user_data
-  #     ports:
-  #       - "8014:8000"
-  #     command: >
-  #       trade
-  #       --logfile /freqtrade/user_data/logs/strategy04.log
-  #       --db-url sqlite:////freqtrade/user_data/strategy04.sqlite
-  #       --config /freqtrade/user_data/strategy_config/strategy04.json
-  #       --strategy TripleSuperTrendADXRSI
+  strategy04:
+      image: freqtradeorg/freqtrade:stable
+      container_name: strategy04
+      restart: unless-stopped
+      environment:
+        - TZ=Asia/Ho_Chi_Minh
+      volumes:
+        - ./user_data:/freqtrade/user_data
+      ports:
+        - "8014:8000"
+      command: >
+        trade
+        --logfile /freqtrade/user_data/logs/strategy04.log
+        --db-url sqlite:////freqtrade/user_data/strategy04.sqlite
+        --config /freqtrade/user_data/strategy_config/strategy04.json
+      logging:
+        driver: "json-file"
+        options:
+          max-size: "10m"   # 單個 log 檔最大 10MB
+          max-file: "3"     # 最多保留 3 個檔案（超過自動覆蓋舊的）
 
-  # strategy05:
-  #     image: freqtradeorg/freqtrade:stable
-  #     container_name: strategy05
-  #     restart: unless-stopped
-  #     environment:
-  #     - TZ=Asia/Ho_Chi_Minh
-  #     volumes:
-  #       - ./user_data:/freqtrade/user_data
-  #     ports:
-  #       - "8015:8000"
-  #     command: >
-  #       trade
-  #       --logfile /freqtrade/user_data/logs/strategy05.log
-  #       --db-url sqlite:////freqtrade/user_data/strategy05.sqlite
-  #       --config /freqtrade/user_data/strategy_config/strategy05.json
-  #       --strategy TrendMeanReversionV4
+  strategy05:
+      image: freqtradeorg/freqtrade:stable
+      container_name: strategy05
+      restart: unless-stopped
+      environment:
+        - TZ=Asia/Ho_Chi_Minh
+      volumes:
+        - ./user_data:/freqtrade/user_data
+      ports:
+        - "8015:8000"
+      command: >
+        trade
+        --logfile /freqtrade/user_data/logs/strategy05.log
+        --db-url sqlite:////freqtrade/user_data/strategy05.sqlite
+        --config /freqtrade/user_data/strategy_config/strategy05.json
+      logging:
+        driver: "json-file"
+        options:
+          max-size: "10m"   # 單個 log 檔最大 10MB
+          max-file: "3"     # 最多保留 3 個檔案（超過自動覆蓋舊的）

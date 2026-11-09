@@ -1,4 +1,4 @@
-# Version: v3.1 (TrendMeanReversionLX with Detailed VN Exit Logging)
+# Version: v3.1 (TrendMeanReversionLX with Detailed VN Exit Logging & Fixed Tag Tracking)
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta, timezone
@@ -28,7 +28,7 @@ class TrendMeanReversionLX(IStrategy):
     startup_candle_count = 320
 
     use_custom_stoploss = True
-    stoploss = -0.20
+    stoploss = -0.99
 
     minimal_roi = {
         "0": 0.06,
@@ -45,9 +45,9 @@ class TrendMeanReversionLX(IStrategy):
     #   "both"   -> 顯示所有交易紀錄 (賺錢與賠錢)
     #   None     -> 完全關閉 Log 輸出 (跑 Hyperopt 時建議設為 None)
     # =========================
-    log_mode = "loss"
+    log_mode = None
 
-    leverage_level = IntParameter(1, 10, default=2, space='buy', optimize=False)
+    leverage_level = IntParameter(1, 10, default=1, space='buy', optimize=False)
 
     trend_ema_period = CategoricalParameter(
         list(range(100, 301, 20)), default=220, space='buy', optimize=True
@@ -76,6 +76,11 @@ class TrendMeanReversionLX(IStrategy):
     mr_min_profit = DecimalParameter(0.005, 0.04, default=0.01, decimals=3, space='sell', optimize=True)
 
     gen_hold_hours = IntParameter(6, 24, default=15, space='sell', optimize=True)
+
+    def __init__(self, config: dict) -> None:
+        super().__init__(config)
+        # 🛡️ 用記憶體字典紀錄每個 Trade ID 對應的停止標籤，避免被資料庫重新整理洗掉
+        self.trade_stop_tags = {}
 
     def leverage(self, pair: str, current_time: datetime, current_rate: float,
                  proposed_leverage: float, max_leverage: float,
@@ -122,6 +127,27 @@ class TrendMeanReversionLX(IStrategy):
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # 🔗 測試讀取並直接印在 Log 裡檢查
+        try:
+            import json
+            from pathlib import Path
+            
+            # 定位檔案路徑
+            watchlist_path = Path("/freqtrade/user_data/pairs_list/watchlist.json")
+            print(f"🔍 [除錯] 檢查 watchlist 檔案是否存在: {watchlist_path.exists()}")
+            
+            if watchlist_path.exists():
+                with open(watchlist_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    pairs = data.get("pairs", [])
+                    print(f"✅ [除錯] 成功讀取檔案！內容數量: {len(pairs)}")
+                    print(f"✅ [除錯] 內容範例: {pairs[:5]}")
+            else:
+                print(f"❌ [除錯] 找不到檔案，請確認掛載路徑是否正確！")
+                
+        except Exception as e:
+            print(f"❌ [除錯] 讀取過程發生例外錯誤: {e}")
+
         period = self.trend_ema_period.value
         ema_col = f'ema_{period}'
         slope_col = f'ema_{period}_slope'
@@ -215,22 +241,25 @@ class TrendMeanReversionLX(IStrategy):
 
         dataframe['exit_long'] = 0
         dataframe['exit_short'] = 0
+        dataframe['exit_tag'] = None
 
-        dataframe.loc[
-            (dataframe['rsi'] > self.exit_rsi_long.value) |
-            (
-                (dataframe['close'] < dataframe[ema_col]) &
-                (dataframe['close'].shift(1) >= dataframe[ema_col].shift(1))
-            ),
-            'exit_long'] = 1
+        cond_exit_long_rsi = (dataframe['rsi'] > self.exit_rsi_long.value)
+        cond_exit_long_ema = (
+            (dataframe['close'] < dataframe[ema_col]) &
+            (dataframe['close'].shift(1) >= dataframe[ema_col].shift(1))
+        )
 
-        dataframe.loc[
-            (dataframe['rsi'] < self.exit_rsi_short.value) |
-            (
-                (dataframe['close'] > dataframe[ema_col]) &
-                (dataframe['close'].shift(1) <= dataframe[ema_col].shift(1))
-            ),
-            'exit_short'] = 1
+        dataframe.loc[cond_exit_long_rsi, ['exit_long', 'exit_tag']] = [1, 'rsi_exit_long']
+        dataframe.loc[cond_exit_long_ema, ['exit_long', 'exit_tag']] = [1, 'ema_cross_exit_long']
+
+        cond_exit_short_rsi = (dataframe['rsi'] < self.exit_rsi_short.value)
+        cond_exit_short_ema = (
+            (dataframe['close'] > dataframe[ema_col]) &
+            (dataframe['close'].shift(1) <= dataframe[ema_col].shift(1))
+        )
+
+        dataframe.loc[cond_exit_short_rsi, ['exit_short', 'exit_tag']] = [1, 'rsi_exit_short']
+        dataframe.loc[cond_exit_short_ema, ['exit_short', 'exit_tag']] = [1, 'ema_cross_exit_short']
 
         return dataframe
 
@@ -239,12 +268,14 @@ class TrendMeanReversionLX(IStrategy):
         trade_dur_hours = (current_time - trade.open_date_utc).total_seconds() / 3600.0
 
         if trade_dur_hours > self.gen_hold_hours.value and current_profit < 0:
+            self.trade_stop_tags[trade.id] = "time_stop_loss"
             return "time_stop_loss"
 
         tag = trade.enter_tag
         if tag in ('mr_long', 'mr_short'):
             if (trade_dur_hours > self.mr_hold_hours.value
                     and current_profit < self.mr_min_profit.value):
+                self.trade_stop_tags[trade.id] = "mr_time_exit"
                 return "mr_time_exit"
 
         return None
@@ -264,16 +295,21 @@ class TrendMeanReversionLX(IStrategy):
                 return None
             return res
 
+        # 1. 高利潤鎖定區塊
         if current_profit > self.lock_high_profit.value:
             res = _from_open(self.lock_high_sl.value)
             if res is not None:
+                self.trade_stop_tags[trade.id] = "lock_high_profit"
                 return res
 
+        # 2. 中利潤鎖定區塊
         if current_profit > self.lock_mid_profit.value:
             res = _from_open(self.lock_mid_sl.value)
             if res is not None:
+                self.trade_stop_tags[trade.id] = "lock_mid_profit"
                 return res
 
+        # 3. 基礎 ATR 停損區塊
         sl_pct = self.sl_base.value
         try:
             dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
@@ -290,8 +326,10 @@ class TrendMeanReversionLX(IStrategy):
 
         res = _from_open(-sl_pct)
         if res is not None:
+            self.trade_stop_tags[trade.id] = "atr_stop"
             return res
 
+        self.trade_stop_tags[trade.id] = "default_stop"
         return -sl_pct
 
     # =========================
@@ -361,7 +399,6 @@ class TrendMeanReversionLX(IStrategy):
         try:
             profit_ratio = trade.calc_profit_ratio(rate)
             
-            # 根據 log_mode 決定是否過濾 Log 輸出
             if not self.log_mode:
                 return True
             
@@ -374,12 +411,14 @@ class TrendMeanReversionLX(IStrategy):
             entry_adx_value = self.get_entry_adx(pair, trade.open_date_utc)
             exit_adx_value = self.get_exit_adx(pair, current_time)
             
-            # 取得時間與價格（轉成越南時間格式）
             entry_time_str = self.format_vn_time(trade.open_date_utc)
             exit_time_str = self.format_vn_time(current_time)
             entry_price = trade.open_rate
             exit_price = rate
             leverage_used = getattr(trade, "leverage", 1.0)
+
+            # 💡 從記憶體字典中安全讀取觸發標籤，若無則預設為 exit_reason
+            custom_tag = self.trade_stop_tags.get(trade.id, exit_reason)
 
             log_title = "賺錢交易出場紀錄" if is_profit else "賠錢交易出場紀錄"
 
@@ -393,7 +432,8 @@ class TrendMeanReversionLX(IStrategy):
                 "實際損益比例 (含槓桿)：%.4f%%\n"
                 "進場當下 ADX(14)：%.2f\n"
                 "出場當下 ADX(14)：%.2f\n"
-                "出場原因：%s\n"
+                "系統出場原因：%s\n"
+                "自訂觸發標籤 (Tag)：%s\n"
                 "=====================================",
                 log_title,
                 pair,
@@ -408,7 +448,12 @@ class TrendMeanReversionLX(IStrategy):
                 entry_adx_value,
                 exit_adx_value,
                 exit_reason or "N/A",
+                custom_tag,
             )
+
+            # 🧹 清理記憶體，移除已結束交易的記錄
+            self.trade_stop_tags.pop(trade.id, None)
+
         except Exception:
             logger.exception("[交易出場 Log 計算失敗]")
 

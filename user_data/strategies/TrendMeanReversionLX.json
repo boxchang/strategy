@@ -8,7 +8,7 @@
       "480": 0.005
     },
     "stoploss": {
-      "stoploss": -0.2
+      "stoploss": -0.99
     },
     "trailing": {
       "trailing_stop": false,
@@ -20,7 +20,7 @@
       "max_open_trades": 10
     },
     "buy": {
-      "leverage_level": 2,
+      "leverage_level": 1,
       "mr_rsi_buy": 21,
       "mr_rsi_sell": 77,
       "mr_stoch_buy": 24,

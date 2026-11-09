@@ -47,11 +47,11 @@
         "use_order_book": true,
         "order_book_top": 2
     },
-
+    "add_config_files": [
+        "config_lucy_public_key.json"
+    ],
     "exchange": {
         "name": "binance",
-		"key": "avq8ZjO9tQJZhuIpvmaQYWwbWGZ03IYrwXwQXDnisAo04irMtcmyHRufU2BlOVzs",
-		"secret": "SVyBSbrdE6NFdP1p6kpaenA6uwFB4QSRNwQfLmr7fMS8wAJ81LmyQkGtkfmJmYdu",
         "ccxt_config": {
             "enableRateLimit": true
         },
@@ -78,9 +78,7 @@
     ],
 
     "telegram": {
-        "enabled": true,
-        "token": "8678662177:AAF92fqxkDLMYkrHWig_h0PdRwfr0SEMl3M",
-        "chat_id": "8949605184"
+        "enabled": true
     },
 
     "api_server": {

@@ -37,3 +37,4 @@ __pycache__
 .env
 .env.*
 !.env.example
+*_key.json

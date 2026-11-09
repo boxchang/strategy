@@ -1,19 +1,19 @@
 {
-    "max_open_trades": 4,
+    "max_open_trades": 10,
     "stake_currency": "USDT",
-    "stake_amount": 100,
+    "stake_amount": 30,
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 1500,
+    "dry_run_wallet": 3000,
     "fiat_display_currency": "",
-    "strategy": "TripleSuperTrendADXRSI",
+    "strategy": "P0_RsiDcaShortStrategy",
     "trading_mode": "futures",
     "margin_mode": "isolated",
-    "leverage": 4,
+    "leverage": 20,
     "stoploss_on_exchange": true,
     "dry_run": true,
     "cancel_open_orders_on_exit": false,
     "position_adjustment_enable": true,
-    "max_entry_position_adjustment": 6,
+    "max_entry_position_adjustment": 3,
     "unfilledtimeout": {
         "unit": "minutes",
         "enter": 10,
@@ -47,7 +47,9 @@
         "use_order_book": true,
         "order_book_top": 2
     },
-
+    "add_config_files": [
+        "strategy04_key.json"
+    ],
     "exchange": {
         "name": "binance",
 		"key": "baGMm6P0FDQuJ122YgtkcVnUo4gNvJbfQ5VxVBktScPFAWi6ePCXECWVxqbglH6g",
@@ -60,10 +62,7 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "SNDK\/USDT:USDT",
-            "MU\/USDT:USDT",
-            "TSM\/USDT:USDT",
-            "NVDA\/USDT:USDT"
+            
         ],
         "pair_blacklist": [
             
@@ -72,7 +71,13 @@
 
     "pairlists": [
         {
-            "method": "StaticPairList"
+            "method": "RemotePairList",
+            "mode": "whitelist",
+            "processing_mode": "append",
+            "number_assets": 100,
+            "refresh_period": 1800,
+            "pairlist_url": "file:///user_data/pairs_list/top_watchlist.json",
+            "keep_pairlist_on_failure": true
         }
     ],
 

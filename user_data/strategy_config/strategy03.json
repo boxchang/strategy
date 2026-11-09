@@ -1,14 +1,14 @@
 {
-    "max_open_trades": 4,
+    "max_open_trades": 10,
     "stake_currency": "USDT",
-    "stake_amount": 500,
+    "stake_amount": 30,
     "tradable_balance_ratio": 1.0,
     "dry_run_wallet": 1500,
     "fiat_display_currency": "",
-    "strategy": "TrendMeanReversion",
+    "strategy": "TrendMeanReversionIX",
     "trading_mode": "futures",
     "margin_mode": "isolated",
-    "leverage": 4,
+    "leverage": 1,
     "stoploss_on_exchange": true,
     "dry_run": true,
     "cancel_open_orders_on_exit": false,
@@ -47,11 +47,11 @@
         "use_order_book": true,
         "order_book_top": 2
     },
-
+    "add_config_files": [
+        "strategy03_key.json"
+    ],
     "exchange": {
         "name": "binance",
-		"key": "baGMm6P0FDQuJ122YgtkcVnUo4gNvJbfQ5VxVBktScPFAWi6ePCXECWVxqbglH6g",
-		"secret": "FmxzPtVP2v8qSP5WZmuCTh2urUiCBz30AHklX0sn1QTAg0hSmwLaMWUy47gQmMpA",
         "ccxt_config": {
             "enableRateLimit": true
         },
@@ -60,10 +60,7 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "SNDK\/USDT:USDT",
-            "MU\/USDT:USDT",
-            "TSM\/USDT:USDT",
-            "NVDA\/USDT:USDT"
+
         ],
         "pair_blacklist": [
             
@@ -72,14 +69,18 @@
 
     "pairlists": [
         {
-            "method": "StaticPairList"
+            "method": "VolumePairList",
+            "number_assets": 100,
+            "sort_key": "quoteVolume",
+            "refresh_period": 1800
+        },
+        {
+            "method": "PrecisionFilter"
         }
     ],
 
     "telegram": {
         "enabled": true,
-        "token": "8810042621:AAFDODdFNrcKv1jrwAdRCPadTUA3YYyYXx4",
-        "chat_id": "8665335878",
           "notification_settings": {
           "status": "on",
           "warning": "on",

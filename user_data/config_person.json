@@ -5,7 +5,7 @@
     "tradable_balance_ratio": 1.0,
     "dry_run_wallet": 1000,
     "fiat_display_currency": "",
-    "strategy": "EmaRsiStrategy",
+    "strategy": "TrendMeanReversionLX",
     "trading_mode": "futures",
     "margin_mode": "isolated",
     "leverage": 1,
@@ -47,11 +47,11 @@
         "use_order_book": true,
         "order_book_top": 2
     },
-
+    "add_config_files": [
+        "config_person_key.json"
+    ],
     "exchange": {
         "name": "binance",
-		"key": "baGMm6P0FDQuJ122YgtkcVnUo4gNvJbfQ5VxVBktScPFAWi6ePCXECWVxqbglH6g",
-		"secret": "FmxzPtVP2v8qSP5WZmuCTh2urUiCBz30AHklX0sn1QTAg0hSmwLaMWUy47gQmMpA",
         "ccxt_config": {
             "enableRateLimit": true
         },
@@ -60,22 +60,7 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "NATGAS\/USDT:USDT",
-            "META\/USDT:USDT",
-            "HOOD\/USDT:USDT",
-            "GOOGL\/USDT:USDT",
-            "AAPL\/USDT:USDT",
-            "ANTHROPICUSDT\/USDT:USDT",
-            "NVO\/USDT:USDT",
-            "INTC\/USDT:USDT",
-            "SNDK\/USDT:USDT",
-            "MU\/USDT:USDT",
-            "TSM\/USDT:USDT",
-            "CRCL\/USDT:USDT",
-            "PLTR\/USDT:USDT",
-            "SKHYNIX\/USDT:USDT",
-            "OPENAI\/USDT:USDT",
-            "MSFT\/USDT:USDT"
+            
         ],
         "pair_blacklist": [
             
@@ -84,14 +69,18 @@
 
     "pairlists": [
         {
-            "method": "StaticPairList"
+            "method": "VolumePairList",
+            "number_assets": 100,
+            "sort_key": "quoteVolume",
+            "refresh_period": 1800
+        },
+        {
+            "method": "PrecisionFilter"
         }
     ],
 
     "telegram": {
         "enabled": true,
-        "token": "8643717061:AAFs8tWTgfE5hT6sdofyAJ08R7LeWKAC-6g",
-        "chat_id": "8665335878",
           "notification_settings": {
           "status": "on",
           "warning": "on",
