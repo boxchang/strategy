@@ -14,7 +14,7 @@ class RSI20LongStrategy(IStrategy):
     startup_candle_count = 30
 
     minimal_roi = {}
-    stoploss = -0.99
+    stoploss = -0.02
     trailing_stop = False
     position_adjustment_enable = False
 
