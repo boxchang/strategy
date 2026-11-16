@@ -2,7 +2,7 @@
   "strategy_name": "RSI20LongStrategy",
   "params": {
     "roi": {
-      "0": 0.02
+      "0": 0.03
     },
     "trailing": {
       "trailing_stop": false,
