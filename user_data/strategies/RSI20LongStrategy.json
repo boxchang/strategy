@@ -17,11 +17,12 @@
       "entry_rsi": 20
     },
     "stoploss": {
-      "stoploss": -0.07
+      "stoploss": -0.1
     },
     "dca": {
-      "dca_price_factor": 0.98
+      "dca_price_factor": 0.976
     }
   },
-  "ft_stratparam_v": 1
+  "ft_stratparam_v": 1,
+  "export_time": "2026-11-16 09:17:48.758542+00:00"
 }

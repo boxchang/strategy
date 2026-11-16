@@ -18,17 +18,17 @@ class RSI20LongStrategy(IStrategy):
     startup_candle_count = 30
 
     minimal_roi = {"0": 0.02}
-    stoploss = -0.07
+    stoploss = -0.1
     trailing_stop = False
     position_adjustment_enable = True
-    max_entry_position_adjustment = 3
+    max_entry_position_adjustment = 10
 
     class HyperOpt:
         @staticmethod
         def stoploss_space():
             from freqtrade.optimize.space import SKDecimal
 
-            return [SKDecimal(-0.07, -0.02, decimals=3, name="stoploss")]
+            return [SKDecimal(-0.08, -0.02, decimals=3, name="stoploss")]
 
     rsi_period = 14
     entry_rsi = IntParameter(

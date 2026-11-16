@@ -3,7 +3,7 @@
     "stake_currency": "USDT",
     "stake_amount": "unlimited",
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 1000,
+    "dry_run_wallet": 5000,
     "fiat_display_currency": "",
     "strategy": "RSI20LongStrategy",
     "trading_mode": "futures",
@@ -13,7 +13,7 @@
     "dry_run": true,
     "cancel_open_orders_on_exit": false,
     "position_adjustment_enable": true,
-    "max_entry_position_adjustment": 3,
+    "max_entry_position_adjustment": 10,
     "unfilledtimeout": {
         "unit": "minutes",
         "enter": 10,
