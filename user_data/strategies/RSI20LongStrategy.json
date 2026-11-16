@@ -1,0 +1,28 @@
+{
+  "strategy_name": "RSI20LongStrategy",
+  "params": {
+    "roi": {
+      "0": 0.02
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "buy": {
+      "entry_rsi": 20
+    },
+    "stoploss": {
+      "stoploss": -0.067
+    },
+    "dca": {
+      "dca_price_factor": 0.976
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-11-16 04:53:38.349861+00:00"
+}

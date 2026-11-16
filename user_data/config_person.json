@@ -12,8 +12,8 @@
     "stoploss_on_exchange": true,
     "dry_run": true,
     "cancel_open_orders_on_exit": false,
-    "position_adjustment_enable": false,
-    "max_entry_position_adjustment": 10,
+    "position_adjustment_enable": true,
+    "max_entry_position_adjustment": 3,
     "unfilledtimeout": {
         "unit": "minutes",
         "enter": 10,
@@ -60,7 +60,8 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "TSM\/USDT:USDT"
+            "TSM\/USDT:USDT",
+            "NVDA\/USDT:USDT"
         ],
         "pair_blacklist": [
             
