@@ -5,12 +5,7 @@ import talib.abstract as ta
 from pandas import DataFrame
 
 from freqtrade.persistence import Trade
-from freqtrade.strategy import (
-    DecimalParameter,
-    IStrategy,
-    IntParameter,
-    stoploss_from_absolute,
-)
+from freqtrade.strategy import DecimalParameter, IStrategy, IntParameter
 
 logger = logging.getLogger(__name__)
 
@@ -22,39 +17,33 @@ class RSI20LongStrategy(IStrategy):
     can_short = False
     startup_candle_count = 30
 
-    minimal_roi = {}
-    # Hard cap: a 2% price stop at 20x corresponds to 40% stake loss.
-    stoploss = -0.40
-    use_custom_stoploss = True
+    minimal_roi = {"0": 0.02}
+    stoploss = -0.07
     trailing_stop = False
     position_adjustment_enable = True
     max_entry_position_adjustment = 3
+
+    class HyperOpt:
+        @staticmethod
+        def stoploss_space():
+            from freqtrade.optimize.space import SKDecimal
+
+            return [SKDecimal(-0.07, -0.02, decimals=3, name="stoploss")]
 
     rsi_period = 14
     entry_rsi = IntParameter(
         low=10, high=50, default=20, space="buy", optimize=True
     )
-    dca_loss_threshold = DecimalParameter(
-        low=0.005,
-        high=0.025,
-        default=0.02,
+    dca_price_factor = DecimalParameter(
+        low=0.975,
+        high=0.995,
+        default=0.98,
         decimals=3,
         space="dca",
         optimize=True,
     )
-    leverage_value = IntParameter(
-        low=1, high=20, default=1, space="leverage", optimize=True
-    )
-    stoploss_price_pct = DecimalParameter(
-        low=0.005,
-        high=0.02,
-        default=0.02,
-        decimals=3,
-        space="price_sl",
-        optimize=True,
-    )
     target_notional = 100.0
-    dca_notional = 100.0
+    dca_stake_amount = 100.0
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe["rsi"] = ta.RSI(dataframe, timeperiod=self.rsi_period)
@@ -103,25 +92,7 @@ class RSI20LongStrategy(IStrategy):
         side: str,
         **kwargs,
     ) -> float:
-        return min(self.leverage_value.value, max_leverage)
-
-    def custom_stoploss(
-        self,
-        pair: str,
-        trade: Trade,
-        current_time: datetime,
-        current_rate: float,
-        current_profit: float,
-        **kwargs,
-    ) -> float:
-        # Do not expose after_fill: DCA must not widen an already-set stop.
-        stop_rate = trade.open_rate * (1 - self.stoploss_price_pct.value)
-        return stoploss_from_absolute(
-            stop_rate,
-            current_rate,
-            is_short=trade.is_short,
-            leverage=trade.leverage,
-        )
+        return 1.0
 
     def adjust_trade_position(
         self,
@@ -146,7 +117,6 @@ class RSI20LongStrategy(IStrategy):
             trade.is_short
             or additional_entries < 0
             or additional_entries >= self.max_entry_position_adjustment
-            or trade.leverage <= 0
         ):
             return None
 
@@ -154,39 +124,30 @@ class RSI20LongStrategy(IStrategy):
         if not average_entry_price:
             return None
 
-        loss_threshold = self.dca_loss_threshold.value
-        trigger_rate = average_entry_price * (
-            1 - loss_threshold / trade.leverage
-        )
-        if current_profit > -loss_threshold:
+        trigger_rate = average_entry_price * self.dca_price_factor.value
+        if current_rate > trigger_rate:
             return None
-
-        dca_stake = self.dca_notional / trade.leverage
         if (
             min_stake is not None
-            and dca_stake < min_stake
-        ) or dca_stake > max_stake:
+            and self.dca_stake_amount < min_stake
+        ) or self.dca_stake_amount > max_stake:
             return None
 
         logger.info(
-            "DCA trigger: pair=%s, add=%d/%d, rate=%.8f, "
-            "approx_trigger=%.8f, average_entry=%.8f, "
-            "loss_threshold=%.2f%%, leverage=%.1fx, profit=%.2f%%, "
-            "notional=%.2f, stake=%.2f, time=%s",
+            "DCA trigger: pair=%s, add=%d/%d, rate=%.8f, trigger=%.8f, "
+            "average_entry=%.8f, factor=%.3f, profit=%.2f%%, stake=%.2f, time=%s",
             trade.pair,
             additional_entries + 1,
             self.max_entry_position_adjustment,
             current_rate,
             trigger_rate,
             average_entry_price,
-            loss_threshold * 100,
-            trade.leverage,
+            self.dca_price_factor.value,
             current_profit * 100,
-            self.dca_notional,
-            dca_stake,
+            self.dca_stake_amount,
             current_time.isoformat(),
         )
-        return dca_stake
+        return self.dca_stake_amount
 
     def version(self) -> str:
-        return "2.5"
+        return "2.4"

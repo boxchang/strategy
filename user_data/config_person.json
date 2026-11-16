@@ -5,7 +5,7 @@
     "tradable_balance_ratio": 1.0,
     "dry_run_wallet": 1000,
     "fiat_display_currency": "",
-    "strategy": "TrendMeanReversionLX",
+    "strategy": "RSI20LongStrategy",
     "trading_mode": "futures",
     "margin_mode": "isolated",
     "leverage": 1,
@@ -19,7 +19,6 @@
         "enter": 10,
         "exit": 30
     },
-
     "order_types": {
         "entry": "limit",
         "exit": "limit",
@@ -30,7 +29,6 @@
         "stoploss_on_exchange": false,
         "stoploss_on_exchange_interval": 60
     },
-
     "entry_pricing": {
         "price_side": "same",
         "ask_last_balance": 0,
@@ -41,7 +39,6 @@
             "bids_to_ask_delta": 1
         }
     },
-
     "exit_pricing": {
         "price_side": "same",
         "use_order_book": true,
@@ -67,13 +64,11 @@
             
         ]
     },
-
     "pairlists": [
         {
             "method": "StaticPairList"
         }
     ],
-
     "telegram": {
         "enabled": true,
           "notification_settings": {
@@ -87,7 +82,6 @@
           "protection_trigger": "on"
       }
     },
-
     "api_server": {
         "enabled": true,
         "listen_ip_address": "0.0.0.0",
@@ -96,12 +90,10 @@
         "password": "luxy#20201010",
         "jwt_secret_key": "9f2c8a7d3b4e5f6a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a5"
     },
-
     "datadir": "/freqtrade/user_data/data",
     "bot_name": "box_person",
     "initial_state": "running",
     "force_entry_enable": false,
-
     "internals": {
         "process_throttle_secs": 5
     }
