@@ -1,9 +1,9 @@
 {
-    "max_open_trades": 3,
+    "max_open_trades": 4,
     "stake_currency": "USDT",
-    "stake_amount": "unlimited",
+    "stake_amount": 100,
     "tradable_balance_ratio": 1.0,
-    "dry_run_wallet": 5000,
+    "dry_run_wallet": 2500,
     "fiat_display_currency": "",
     "strategy": "RSI20LongStrategy",
     "trading_mode": "futures",

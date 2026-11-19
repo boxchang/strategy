@@ -41,6 +41,7 @@
 ## AI 必須先確認
 
 - 目前安裝的 Freqtrade 版本與 Python 版本。
+- docker compose的指令皆使用docker-compose
 - 策略使用的市場類型及交易對格式。
 - 交易所 position mode 與 margin mode。
 - 手續費、資金費率、滑價及資料來源。

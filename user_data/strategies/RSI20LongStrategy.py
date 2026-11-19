@@ -17,8 +17,11 @@ class RSI20LongStrategy(IStrategy):
     can_short = False
     startup_candle_count = 30
 
-    minimal_roi = {"0": 0.03}
-    stoploss = -0.1
+    leverage_value = 7.0
+    base_minimal_roi = 0.03
+    base_stoploss = -0.1
+    minimal_roi = {"0": base_minimal_roi * leverage_value}
+    stoploss = base_stoploss * leverage_value
     trailing_stop = False
     position_adjustment_enable = True
     max_entry_position_adjustment = 10
@@ -28,7 +31,15 @@ class RSI20LongStrategy(IStrategy):
         def stoploss_space():
             from freqtrade.optimize.space import SKDecimal
 
-            return [SKDecimal(-0.08, -0.02, decimals=3, name="stoploss")]
+            leverage = RSI20LongStrategy.leverage_value
+            return [
+                SKDecimal(
+                    -0.08 * leverage,
+                    -0.02 * leverage,
+                    decimals=3,
+                    name="stoploss",
+                )
+            ]
 
     rsi_period = 14
     entry_rsi = IntParameter(
@@ -37,12 +48,11 @@ class RSI20LongStrategy(IStrategy):
     dca_price_factor = DecimalParameter(
         low=0.975,
         high=0.995,
-        default=0.98,
+        default=0.976,
         decimals=3,
         space="dca",
         optimize=True,
     )
-    target_notional = 100.0
     dca_stake_amount = 100.0
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -75,7 +85,7 @@ class RSI20LongStrategy(IStrategy):
         if side != "long" or leverage <= 0:
             return 0.0
 
-        stake = self.target_notional / leverage
+        stake = proposed_stake
         if (min_stake is not None and stake < min_stake) or stake > max_stake:
             return 0.0
 
@@ -92,7 +102,7 @@ class RSI20LongStrategy(IStrategy):
         side: str,
         **kwargs,
     ) -> float:
-        return 1.0
+        return self.leverage_value
 
     def adjust_trade_position(
         self,
@@ -150,4 +160,4 @@ class RSI20LongStrategy(IStrategy):
         return self.dca_stake_amount
 
     def version(self) -> str:
-        return "2.4"
+        return "2.7"

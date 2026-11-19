@@ -1,9 +1,6 @@
 {
   "strategy_name": "RSI20LongStrategy",
   "params": {
-    "roi": {
-      "0": 0.03
-    },
     "trailing": {
       "trailing_stop": false,
       "trailing_stop_positive": null,
@@ -15,9 +12,6 @@
     },
     "buy": {
       "entry_rsi": 20
-    },
-    "stoploss": {
-      "stoploss": -0.1
     },
     "dca": {
       "dca_price_factor": 0.976

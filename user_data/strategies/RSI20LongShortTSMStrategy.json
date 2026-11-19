@@ -1,0 +1,32 @@
+{
+  "strategy_name": "RSI20LongShortTSMStrategy",
+  "params": {
+    "roi": {
+      "0": 0.21
+    },
+    "stoploss": {
+      "stoploss": -0.6000000000000001
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 4
+    },
+    "dca": {
+      "dca_price_factor": 0.976
+    },
+    "sell": {
+      "unprofitable_exit_hours": 300
+    },
+    "buy": {
+      "entry_rsi": 20,
+      "short_entry_rsi": 81
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-11-18 02:22:10.669593+00:00"
+}
