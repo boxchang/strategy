@@ -5,7 +5,7 @@
     "tradable_balance_ratio": 1.0,
     "dry_run_wallet": 2500,
     "fiat_display_currency": "",
-    "strategy": "RSI20LongStrategy",
+    "strategy": "RSI20LongShortTSMStrategy",
     "trading_mode": "futures",
     "margin_mode": "isolated",
     "leverage": 1,

@@ -11,7 +11,8 @@
       "max_open_trades": 3
     },
     "buy": {
-      "entry_rsi": 20
+      "entry_rsi": 20,
+      "tsm_long_max_price": 380.0
     },
     "dca": {
       "dca_price_factor": 0.976

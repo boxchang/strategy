@@ -5,7 +5,12 @@ import talib.abstract as ta
 from pandas import DataFrame
 
 from freqtrade.persistence import Trade
-from freqtrade.strategy import DecimalParameter, IStrategy, IntParameter
+from freqtrade.strategy import (
+    DecimalParameter,
+    IStrategy,
+    IntParameter,
+    merge_informative_pair,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -16,6 +21,16 @@ class RSI20LongStrategy(IStrategy):
     timeframe = "15m"
     can_short = False
     startup_candle_count = 30
+
+    tsm_pair = "TSM/USDT:USDT"
+    tsm_long_max_price = DecimalParameter(
+        low=0.0,
+        high=1000.0,
+        default=370.0,
+        decimals=2,
+        space="buy",
+        optimize=False,
+    )
 
     leverage_value = 7.0
     base_minimal_roi = 0.03
@@ -55,13 +70,28 @@ class RSI20LongStrategy(IStrategy):
     )
     dca_stake_amount = 100.0
 
+    def informative_pairs(self) -> list[tuple[str, str]]:
+        return [(self.tsm_pair, self.timeframe)]
+
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe["rsi"] = ta.RSI(dataframe, timeperiod=self.rsi_period)
-        return dataframe
+
+        tsm_dataframe = self.dp.get_pair_dataframe(
+            pair=self.tsm_pair, timeframe=self.timeframe
+        )
+        return merge_informative_pair(
+            dataframe,
+            tsm_dataframe[["date", "close"]],
+            self.timeframe,
+            self.timeframe,
+            ffill=True,
+        )
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
-            (dataframe["rsi"] < self.entry_rsi.value) & (dataframe["volume"] > 0),
+            (dataframe["rsi"] < self.entry_rsi.value)
+            & (dataframe["volume"] > 0)
+            & (dataframe["close_15m"] < self.tsm_long_max_price.value),
             ["enter_long", "enter_tag"],
         ] = (1, f"rsi_below_{self.entry_rsi.value}")
         return dataframe
@@ -160,4 +190,4 @@ class RSI20LongStrategy(IStrategy):
         return self.dca_stake_amount
 
     def version(self) -> str:
-        return "2.7"
+        return "2.8"

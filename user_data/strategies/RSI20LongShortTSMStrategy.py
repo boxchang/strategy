@@ -9,7 +9,6 @@ from freqtrade.strategy import (
     DecimalParameter,
     IStrategy,
     IntParameter,
-    merge_informative_pair,
 )
 
 logger = logging.getLogger(__name__)
@@ -22,11 +21,7 @@ class RSI20LongShortTSMStrategy(IStrategy):
     can_short = True
     startup_candle_count = 30
 
-    tsm_pair = "TSM/USDT:USDT"
-    tsm_long_only_price = 380.0
-    tsm_short_only_price = 420.0
-
-    leverage_value = 6.0
+    leverage_value = 8.0
     base_minimal_roi = 0.03
     base_stoploss = -0.1
     minimal_roi = {"0": base_minimal_roi * leverage_value}
@@ -68,43 +63,20 @@ class RSI20LongShortTSMStrategy(IStrategy):
         space="dca",
         optimize=True,
     )
-    target_notional = 100.0
     dca_stake_amount = 100.0
-
-    def informative_pairs(self) -> list[tuple[str, str]]:
-        return [(self.tsm_pair, self.timeframe)]
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe["rsi"] = ta.RSI(dataframe, timeperiod=self.rsi_period)
-
-        tsm_dataframe = self.dp.get_pair_dataframe(
-            pair=self.tsm_pair, timeframe=self.timeframe
-        )
-        return merge_informative_pair(
-            dataframe,
-            tsm_dataframe[["date", "close"]],
-            self.timeframe,
-            self.timeframe,
-            ffill=True,
-        )
+        return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        tsm_price = dataframe["close_15m"]
-        middle_tsm_range = (
-            (tsm_price > self.tsm_long_only_price)
-            & (tsm_price < self.tsm_short_only_price)
-        )
-        allow_long = (tsm_price <= self.tsm_long_only_price) | middle_tsm_range
-        allow_short = (tsm_price >= self.tsm_short_only_price) | middle_tsm_range
         has_volume = dataframe["volume"] > 0
 
         long_condition = (
-            allow_long & (dataframe["rsi"] < self.entry_rsi.value) & has_volume
+            (dataframe["rsi"] < self.entry_rsi.value) & has_volume
         )
         short_condition = (
-            allow_short
-            & (dataframe["rsi"] > self.short_entry_rsi.value)
-            & has_volume
+            (dataframe["rsi"] > self.short_entry_rsi.value) & has_volume
         )
 
         dataframe.loc[
@@ -153,7 +125,7 @@ class RSI20LongShortTSMStrategy(IStrategy):
         if side not in {"long", "short"} or leverage <= 0:
             return 0.0
 
-        stake = self.target_notional / leverage
+        stake = proposed_stake
         if (min_stake is not None and stake < min_stake) or stake > max_stake:
             return 0.0
 
@@ -228,4 +200,4 @@ class RSI20LongShortTSMStrategy(IStrategy):
         return self.dca_stake_amount
 
     def version(self) -> str:
-        return "1.1"
+        return "1.3"
